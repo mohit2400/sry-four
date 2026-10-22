@@ -1,0 +1,63 @@
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffe3ec, #e8dcff, #d6f0ff);
+  background-size: 300% 300%;
+  animation: bg 12s ease infinite;
+  overflow-x: hidden;
+}
+
+@keyframes bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.card-sorry {
+  border: none;
+  border-radius: 28px;
+  box-shadow: 0 12px 40px rgba(120, 80, 160, .25);
+}
+
+h1 {
+  font-weight: 800;
+  color: #7a3fb0;
+}
+
+.big-cat {
+  font-size: 5rem;
+  display: inline-block;
+  animation: bounce 1.6s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) rotate(-6deg); }
+  50% { transform: translateY(-14px) rotate(6deg); }
+}
+
+.gif-box img {
+  max-width: 100%;
+  max-height: 260px;
+  border-radius: 18px;
+}
+
+#noBtn {
+  position: relative;
+  transition: all .15s;
+}
+
+.falling {
+  position: fixed;
+  top: -50px;
+  font-size: 2rem;
+  pointer-events: none;
+  animation: fall linear forwards;
+  z-index: 999;
+}
+
+@keyframes fall {
+  to { transform: translateY(110vh) rotate(360deg); }
+}
+
+.hidden {
+  display: none;
+}
